@@ -1,14 +1,5 @@
-/*
-  DigitalReadSerial
 
-  Reads a digital input on pin 2, prints the result to the Serial Monitor
-
-  This example code is in the public domain.
-
-  http://www.arduino.cc/en/Tutorial/DigitalReadSerial
-*/
-
-// digital pin 2 has a pushbutton attached to it. Give it a name:
+// Button is attached between digital pin 2 and the GND
 int pushButton = 2;
 int prevButtonState;
 // the setup routine runs once when you press reset:
@@ -25,7 +16,7 @@ void loop() {
   int buttonState = digitalRead(pushButton);
   // print out the state of the button:
   if (buttonState != prevButtonState){
-    Serial.println(buttonState);
+    Serial.print(buttonState);
     prevButtonState = buttonState;
   }
   delay(100);        // delay in between reads for stability
